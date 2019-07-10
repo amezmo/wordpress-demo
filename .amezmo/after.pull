@@ -38,4 +38,6 @@ echo "wp core install";
     --admin_email='info@amezmo.com' \
     --skip-email
 
-echo "Done. Make sure you change your password. Change your document root directory to wordpress";
+echo "Done. Check out your site at https://${APP_DOMAIN}";
+
+exit 0;
