@@ -18,8 +18,10 @@ tar -xvf wordpress.tar.gz
 
 cd wordpress;
 
+echo "Changing wp-cli to executable";
+
 echo "Running wp config create";
-./wp config create \
+../wp-cli config create \
     --dbname=${DB_DATABASE} \
     --dbuser=${DB_USERNAME} \
     --dbpass=${DB_PASSWORD} \
@@ -27,7 +29,7 @@ echo "Running wp config create";
     --allow-root
 
 echo "wp core install";
-./wp core install \
+../wp-cli core install \
     --allow-root \
     --url=$APP_DOMAIN \
     --title="Amezmo WordPress" \
