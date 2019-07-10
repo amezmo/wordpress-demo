@@ -5,11 +5,18 @@
 set -e
 
 echo "Welcome to the WordPress automation script";
-echo "Installing environment variables from ../.env";
-source ../.env
+echo "Installing environment variables from ./../.env";
+source ./../.env
 echo "Running wp config create";
 
-wp config create \
+cd ./../
+
+curl https://wordpress.org/latest.tar.gz > wordpress.tar.gz
+tar -xvf wordpress.tar.gz
+
+cd wordpress;
+
+./wp config create \
     --dbname=${DB_DATABASE} \
     --dbuser=${DB_USERNAME} \
     --dbpass=${DB_PASSWORD} \
@@ -18,14 +25,13 @@ wp config create \
 
 echo "wp core install";
 
-wp core install \
+./wp core install \
     --allow-root \
     --url=$APP_DOMAIN \
     --title="Amezmo WordPress" \
     --admin_user=admin \
-    --admin_password="password" \
-    --admin_email='info@amezmo.com \
+    --admin_password='password' \
+    --admin_email='info@amezmo.com' \
     --skip-email
-
 
 echo "Done. Make sure you change your password.";
