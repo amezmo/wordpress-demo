@@ -31,7 +31,7 @@ echo "Running wp config create";
 echo "wp core install";
 ../wp-cli core install \
     --allow-root \
-    --url=$APP_DOMAIN \
+    --url=https://$APP_DOMAIN \
     --title="Amezmo WordPress" \
     --admin_user=admin \
     --admin_password='password' \
