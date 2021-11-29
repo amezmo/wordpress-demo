@@ -25,7 +25,7 @@ echo "Running wp config create";
     --dbname=${DB_DATABASE} \
     --dbuser=${DB_USERNAME} \
     --dbpass=${DB_PASSWORD} \
-    --dbhost=localhost \
+    --dbhost=${DB_HOST} \
     --allow-root
 
 echo "wp core install";
