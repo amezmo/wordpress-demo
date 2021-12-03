@@ -18,4 +18,4 @@ Edit the values between the quotes to your chosen ones. Make sure to commit your
 Learn more about Amezmo at [https://www.amezmo.com](https://www.amezmo.com/?utm_source=GitHub&utm_campaign=WordpressRepositoryReadMe&utm_medium=social)
 
 # Next (Advanced)
-To further leverage Amezmo, you may consider using a more advanced WordPress deployment strategy. You can learn more about this from the Blog post How To Install WordPress With Git located at https://blog.amezmo.com/how-to-install-wordpress-with-git/
+To further leverage Amezmo, you may consider using a more advanced WordPress deployment and caching strategy.
